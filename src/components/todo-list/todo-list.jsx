@@ -7,8 +7,17 @@ import "./todo-list.scss";
 export const TodoList = () => {
   const [todos, setTodos] = useContext(TodosContext);
 
+
+
   const toggleCheck = (id) => {
-    // Fix an ability to toggle task
+    const newState = todos.map(task => {
+      if (task.id === id) {
+        return { ...task, checked: !task.checked };
+      }
+      return task;
+    });
+
+    setTodos(newState);
   };
 
   const handleKeyUp = (e, id) => {
