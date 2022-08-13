@@ -10,8 +10,8 @@ export const TodoForm = () => {
   const [task, setTask] = React.useState("");
 
   const handleAddTodo = (event) => {
-
     setTodos([...todos, { id: uuidv4(), label: task, checked: false }])
+    setTask('');
   };
 
   const handleKeyUp = (e) => {
