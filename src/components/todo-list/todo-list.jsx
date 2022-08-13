@@ -17,6 +17,10 @@ export const TodoList = () => {
     }
   };
 
+  const onDelete = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
   return (
     <div className="todo-list">
       <span className="todo-list-title">Things to do:</span>
@@ -29,6 +33,7 @@ export const TodoList = () => {
               checked={todoItem.checked}
               onClick={() => toggleCheck(todoItem.id)}
               onKeyUp={(e) => handleKeyUp(e, todoItem.id)}
+              onDelete={() => onDelete(todoItem.id)}
             />
           ))}
         </div>

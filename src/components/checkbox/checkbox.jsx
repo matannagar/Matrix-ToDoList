@@ -1,9 +1,7 @@
 import * as React from 'react';
 import './checkbox.scss';
 
-export const Checkbox = ({
- onClick, checked, onDelete, label, onKeyUp,
-}) => (
+export const Checkbox = ({ onClick, checked, onDelete, label, onKeyUp, }) => (
   <div className="checkbox">
     <div
       tabIndex="0"

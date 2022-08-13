@@ -9,7 +9,7 @@ export const TodoForm = () => {
   const [todos, setTodos] = useContext(TodosContext);
   const [task, setTask] = React.useState("");
 
-  const handleAddTodo = (event) => {
+  const handleAddTodo = () => {
     setTodos([...todos, { id: uuidv4(), label: task, checked: false }])
     setTask('');
   };
