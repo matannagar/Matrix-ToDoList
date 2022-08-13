@@ -1,11 +1,12 @@
 import * as React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Checkbox } from "../checkbox";
 import { TodosContext } from "../../todo-context";
 import "./todo-list.scss";
 
 export const TodoList = () => {
-  const [todos, setTodos] = useContext(TodosContext);
+  const [todos, setTodos, task, setTask] = useContext(TodosContext);
+  // const [editTodo, setEditTodo] = useState(null);
 
   // iterate todos and update checked to be the opposite of current state
   const toggleCheck = (id) => {
@@ -29,6 +30,11 @@ export const TodoList = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  const onEdit = (id, label) => {
+    setTask(label);
+    onDelete(id);
+  }
+
   return (
     <div className="todo-list">
       <span className="todo-list-title">Things to do:</span>
@@ -42,6 +48,7 @@ export const TodoList = () => {
               onClick={() => toggleCheck(todoItem.id)}
               onKeyUp={(e) => handleKeyUp(e, todoItem.id)}
               onDelete={() => onDelete(todoItem.id)}
+              onEdit={() => onEdit(todoItem.id, todoItem.label)}
             />
           ))}
         </div>

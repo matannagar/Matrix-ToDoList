@@ -3,7 +3,7 @@ import React, { useState, createContext } from 'react';
 export const TodosContext = createContext({});
 
 export const TodosProvider = props => {
-    const [todos, setTodos] = React.useState([
+    const [todos, setTodos] = useState([
         {
             id: 0,
             label: "Fix an ability to display all tasks",
@@ -36,8 +36,10 @@ export const TodosProvider = props => {
         },
     ]);
 
+    const [task, setTask] = useState('');
+
     return (
-        <TodosContext.Provider value={[todos, setTodos]}>
+        <TodosContext.Provider value={[todos, setTodos, task, setTask]}>
             {props.children}
         </TodosContext.Provider>
     )

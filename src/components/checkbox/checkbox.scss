@@ -32,7 +32,20 @@
 
     &:hover {
       background: rgb(172, 172, 172);
-    }
+    }    
+  }
+
+  &-edit {
+    background: rgb(71, 163, 199);
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    &:hover {
+      background: rgb(59, 106, 124);
+    }    
   }
 
   &-checked {
