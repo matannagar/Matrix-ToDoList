@@ -6,7 +6,13 @@ import "./todo-results.scss";
 export const TodoResults = () => {
   const [todos, setTodos] = useContext(TodosContext);
 
-  const calculateChecked = () => { };
+  const calculateChecked = () => {
+    let count = 0;
+    todos.forEach(task => {
+      if (task.checked) count++;
+    })
+    return count;
+  };
 
   return (
     <div className="todo-results">

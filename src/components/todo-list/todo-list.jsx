@@ -7,8 +7,7 @@ import "./todo-list.scss";
 export const TodoList = () => {
   const [todos, setTodos] = useContext(TodosContext);
 
-
-
+  // iterate todos and update checked to be the opposite of current state
   const toggleCheck = (id) => {
     const newState = todos.map(task => {
       if (task.id === id) {
@@ -16,7 +15,6 @@ export const TodoList = () => {
       }
       return task;
     });
-
     setTodos(newState);
   };
 
@@ -26,6 +24,7 @@ export const TodoList = () => {
     }
   };
 
+  // use filter to return array without current task
   const onDelete = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
