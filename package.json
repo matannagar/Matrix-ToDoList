@@ -61,11 +61,12 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
-    "eslint-webpack-plugin": "^2.5.2"
+    "eslint-webpack-plugin": "^2.5.2",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "react-scripts build",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
