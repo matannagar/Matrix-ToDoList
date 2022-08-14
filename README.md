@@ -1,7 +1,7 @@
 # To Do List React App
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-![image](https://user-images.githubusercontent.com/73398186/176395416-aec1d4a4-09e4-4ceb-b515-0f4514c3feed.png)
+![image](website.gif)
 
 ## Description
 
