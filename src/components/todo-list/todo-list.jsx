@@ -1,12 +1,11 @@
 import * as React from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Checkbox } from "../checkbox";
 import { TodosContext } from "../../todo-context";
 import "./todo-list.scss";
 
 export const TodoList = () => {
   const [todos, setTodos, task, setTask] = useContext(TodosContext);
-  // const [editTodo, setEditTodo] = useState(null);
 
   // iterate todos and update checked to be the opposite of current state
   const toggleCheck = (id) => {

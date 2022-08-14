@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from "uuid";
 
 export const TodoForm = () => {
   const [todos, setTodos, task, setTask] = useContext(TodosContext);
-  // const [] = useContext(TodosContext);
 
   const handleAddTodo = () => {
     setTodos([...todos, { id: uuidv4(), label: task, checked: false }])
